@@ -4,7 +4,7 @@ var personData = require('../data/friends.js');
 var scoresArray = [];
 //initializing sum array to hold the sum of the differences in scoresArray
 var sumArray = [];
-//function that gets the absolute value of the difference between user and stored users, this function helps push values into sumArray.
+//function that gets the absolute value of the difference between user and stored users
 Array.prototype.SumArray = function (arr) {
 
  var difference = this.map(function (num, idx) {
@@ -32,7 +32,7 @@ module.exports = function (app) {
    //takes absolute value and sums values, then pushes to sumArray.
    sumArray.push(scoresArray[i].reduce(add, 0))
   };
-  //finds the index of the lowest value in sumArray
+  //finds the index of the lowest value in sumArray, if two values are equal, takes left most index
   var indexOfMinValue = sumArray.reduce((iMin, x, i, arr) => x < arr[iMin] ? i : iMin, 0);
   console.log(indexOfMinValue);
   //sends the index value of the lowest sum in sumArray, index value corresponds to the correct user in the personData object.
@@ -40,7 +40,7 @@ module.exports = function (app) {
   console.log(scoresArray);
   console.log(sumArray);
   //empty arrays after postin
-  scoresArray=[];
+  scoresArray = [];
   sumArray = [];
  });
 
