@@ -1,4 +1,4 @@
-//including standard user for testing purposes.
+//including standard users for testing purposes and initial results
 
 var personArray = [
  {
