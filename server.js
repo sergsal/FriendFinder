@@ -6,7 +6,7 @@ var path = require('path');
 //creating express server
 var app = express();
 // setting the port
-var PORT = process.env.PORT || 80;
+var PORT = process.env.PORT || 8080;
 
 //using body parser to properly interpret data
 app.use(bodyParser.json());
